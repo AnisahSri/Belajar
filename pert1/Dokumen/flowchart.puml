@@ -1,0 +1,27 @@
+@startuml
+start
+:Mulai;
+:Login ke Sistem;
+if (Login Berhasil?) then (Ya)
+  :Pilih Menu;
+  if (Pilih Operasi?) then
+    :Masukkan Kata Kunci;
+    :Tampilkan Hasil Pencarian;
+  else if (Pinjam Buku)
+    :Masukkan ID Buku;
+    :Periksa Ketersediaan Buku;
+    :Pinjam Buku Berhasil;
+  else if (Kembalikan Buku)
+    :Masukkan ID Buku;
+    :Perbarui Status Buku;
+    :Pengembalian Selesai;
+  endif
+  :Kembali ke Menu Utama;
+else (Tidak)
+  :Tampilkan Pesan Kesalahan;
+  :Kembali ke Halaman Login;
+endif
+:Logout;
+:End;
+stop
+@enduml

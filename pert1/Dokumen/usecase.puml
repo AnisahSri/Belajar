@@ -1,0 +1,18 @@
+@startuml
+actor "User" as u
+actor "Admin" as a
+
+rectangle "Library System" {
+  usecase "Login" as UC1
+  usecase "Cari Buku" as UC2
+  usecase "Pinjam Buku" as UC3
+  usecase "Kembalikan Buku" as UC4
+  usecase "Kelola Data Buku" as UC5
+}
+
+u -- UC1
+u -- UC2
+u -- UC3
+u -- UC4
+a -- UC5
+@enduml
